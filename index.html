@@ -3,121 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taita (Thomas) | Automation & Software Developer</title>
+    <title>Taita (Thomas) | Automation & Software Solutions</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">TAITA (THOMAS)</div>
-        <ul class="nav-links">
-            <li><a href="#about">Kỹ năng</a></li>
-            <li><a href="#projects">Dự án</a></li>
-            <li><a href="#knowledge">Blog</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
+        <div class="container nav-container">
+            <div class="logo">TAITA (THOMAS)</div>
+            <ul class="nav-links">
+                <li><a href="#about">Năng lực</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#experience">Kinh nghiệm</a></li>
+                <li><a href="#contact" class="btn-contact">Liên hệ</a></li>
+            </ul>
+        </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <h1>Industrial Automation & Software Solutions</h1>
-            <p>Tôi xây dựng các giải pháp SCADA, Machine Vision và ứng dụng quản lý sản xuất hiện đại, ổn định và hiệu quả.</p>
-            <a href="#projects" class="btn">Xem Dự Án Thực Tế</a>
+        <div class="container hero-content">
+            <span class="badge">Full-Stack Automation Developer</span>
+            <h1>Giải pháp Tự động hóa &<br>Phần mềm Công nghiệp</h1>
+            <p>Tôi kết hợp tư duy lập trình hiện đại (.NET/Blazor) với kiến thức điều khiển công nghiệp (PLC/Robot) để tạo ra các hệ thống sản xuất thông minh, chính xác và hiệu quả.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">Xem Dự Án</a>
+                <a href="https://github.com/Tai-trieua" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="container">
-        <h2><i class="fas fa-layer-group"></i> Năng Lực Cốt Lõi</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3><i class="fas fa-industry"></i> Automation & IoT</h3>
-                <p>Chuyên sâu PLC Siemens (S7-1200/1500), PID Control (Pellet Mill). Tích hợp IoT Gateway (Raspberry Pi + Node-RED) và giao thức Modbus TCP/RTU, MQTT.</p>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-code"></i> .NET Ecosystem</h3>
-                <p>Phát triển Desktop/Web App với C# (WPF, Blazor). Xử lý dữ liệu với Entity Framework & SQLite. Tư duy thiết kế Modern Dark UI.</p>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-eye"></i> Machine Vision & AI</h3>
-                <p>Xử lý ảnh công nghiệp (HIKRobot, Keyence). Tích hợp AI/Gemini API vào giám sát quy trình và kiểm tra lỗi sản phẩm.</p>
-            </div>
-            <div class="skill-card">
-                <h3><i class="fas fa-mobile-alt"></i> Cross-Platform</h3>
-                <p>Phát triển ứng dụng di động (Flutter) cho kỹ thuật viên (VD: Sổ tay biến tần, Monitor App).</p>
+    <section id="about" class="section-light">
+        <div class="container">
+            <h2 class="section-title">Lĩnh Vực Chuyên Môn</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-robot"></i></div>
+                    <h3>Industrial Automation</h3>
+                    <ul class="skill-list">
+                        <li><strong>PLC:</strong> Siemens (S7-1200/1500), Beckhoff (PC-based Control).</li>
+                        <li><strong>Hardware:</strong> Yaskawa Servo Motors, Biến tần.</li>
+                        <li><strong>Protocols:</strong> Modbus TCP/RTU, S7net, OPC UA.</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-code"></i></div>
+                    <h3>Software Development</h3>
+                    <ul class="skill-list">
+                        <li><strong>Core:</strong> C# .NET 8, Dependency Injection, Clean Architecture.</li>
+                        <li><strong>Web App:</strong> Blazor Server/WASM, MudBlazor UI.</li>
+                        <li><strong>Desktop:</strong> Windows Forms, WPF (MVVM).</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-eye"></i></div>
+                    <h3>Computer Vision</h3>
+                    <ul class="skill-list">
+                        <li><strong>Camera:</strong> HIKRobot, Keyence Industrial Cams.</li>
+                        <li><strong>Libs:</strong> HALCON, OpenCV, Tesseract (OCR).</li>
+                        <li><strong>App:</strong> Nhận diện lỗi, đọc Date code (ORC).</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile & IoT</h3>
+                    <ul class="skill-list">
+                        <li><strong>Mobile:</strong> Flutter (Cross-platform) cho ứng dụng kỹ thuật.</li>
+                        <li><strong>Database:</strong> SQLite, SQL Server, Entity Framework.</li>
+                        <li><strong>IoT:</strong> Kết nối thiết bị đo lường và SCADA.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="container">
-        <h2><i class="fas fa-project-diagram"></i> Dự Án Tiêu Biểu</h2>
-        <div class="project-grid">
-            
-            <div class="project-card">
-                <div class="card-header">Machine Vision</div>
-                <h3>TaTVisionApp</h3>
-                <p>Ứng dụng Desktop xử lý ảnh, kết nối Camera HIKRobot/Keyence để phát hiện lỗi sản phẩm với giao diện Dark Mode hiện đại.</p>
-                <div class="tags">
-                    <span class="tag">C# WPF</span> <span class="tag">OpenCV</span> <span class="tag">HIKRobot SDK</span>
+    <section id="projects" class="section-gray">
+        <div class="container">
+            <h2 class="section-title">Dự Án Thực Tế</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="card-img">SCADA</div>
+                    <div class="card-body">
+                        <h3>TaTSCADA System</h3>
+                        <p class="desc">Hệ thống SCADA tùy biến cao, hỗ trợ thiết kế giao diện (UI Designer), quản lý User và lưu trữ layout động.</p>
+                        <div class="tech-stack">
+                            <span>C#</span><span>Blazor</span><span>SignalR</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="card-header">Warehouse Automation</div>
-                <h3>NWAC System</h3>
-                <p>Hệ thống quản lý kho tự động. Tích hợp nhận diện khuôn mặt (FaceID) để phân quyền và giám sát trạng thái lưu kho.</p>
-                <div class="tags">
-                    <span class="tag">.NET Core</span> <span class="tag">SQL Server</span> <span class="tag">Face Rec</span>
+                <div class="project-card">
+                    <div class="card-img">VISION</div>
+                    <div class="card-body">
+                        <h3>ORC-Vision Solution</h3>
+                        <p class="desc">Giải pháp OCR đọc hạn sử dụng trên lon nước giải khát. Tích hợp Camera HIKRobot và xử lý ảnh tốc độ cao.</p>
+                        <div class="tech-stack">
+                            <span>OpenCV</span><span>Tesseract</span><span>HIK SDK</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="card-header">Production Tools</div>
-                <h3>NPalletLabel</h3>
-                <p>Giải pháp tạo và quản lý mã QR cho Pallet, giao tiếp trực tiếp với PLC dây chuyền để đồng bộ dữ liệu sản xuất.</p>
-                <div class="tags">
-                    <span class="tag">C#</span> <span class="tag">S7-1200</span> <span class="tag">Zebra Printer</span>
+                <div class="project-card">
+                    <div class="card-img">WMS</div>
+                    <div class="card-body">
+                        <h3>QuanLyKho (WMS)</h3>
+                        <p class="desc">Ứng dụng quản lý kho toàn diện: Nhập/Xuất hàng, Export Excel, Quản lý nhà cung cấp & khách hàng.</p>
+                        <div class="tech-stack">
+                            <span>MudBlazor</span><span>Entity Framework</span><span>SQL</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="card-header">SCADA Framework</div>
-                <h3>TaTSCADA</h3>
-                <p>Nền tảng SCADA tùy biến, hỗ trợ đa luồng kết nối Modbus/MQTT, giám sát thời gian thực và cảnh báo sự cố.</p>
-                <div class="tags">
-                    <span class="tag">C# Blazor</span> <span class="tag">MQTT</span> <span class="tag">Chart JS</span>
+                <div class="project-card">
+                    <div class="card-img">ACCESS</div>
+                    <div class="card-body">
+                        <h3>NWAC Access Control</h3>
+                        <p class="desc">Hệ thống kiểm soát ra vào kho tự động, tích hợp nhận diện khuôn mặt và giao tiếp PLC cửa cuốn.</p>
+                        <div class="tech-stack">
+                            <span>.NET Core</span><span>FaceID API</span><span>Modbus</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
+                <div class="project-card">
+                    <div class="card-img">TOOLS</div>
+                    <div class="card-body">
+                        <h3>Servo Cable Selector</h3>
+                        <p class="desc">Phần mềm tính toán và chọn mã cáp nguồn/encoder cho Servo Yaskawa, hỗ trợ kỹ sư thiết kế điện.</p>
+                        <div class="tech-stack">
+                            <span>WinForm</span><span>Logic Algorithm</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="project-card">
+                    <div class="card-img">APP</div>
+                    <div class="card-body">
+                        <h3>Sổ Tay Biến Tần</h3>
+                        <p class="desc">Ứng dụng Mobile tra cứu mã lỗi và thông số kỹ thuật biến tần, sử dụng cơ sở dữ liệu offline SQLite.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span><span>SQLite</span><span>Dart</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </section>
-
-    <section id="knowledge" class="container">
-        <h2><i class="fas fa-book-open"></i> Chia Sẻ Kiến Thức</h2>
-        <ul class="knowledge-list">
-            <li><a href="#"><i class="fas fa-file-code"></i> Ứng dụng Fuzzy PID trong điều khiển máy ép cám (Pellet Mill)</a></li>
-            <li><a href="#"><i class="fas fa-network-wired"></i> Cấu hình S7-1200 G2 giao tiếp với Node-RED trên Raspberry Pi 5</a></li>
-            <li><a href="#"><i class="fas fa-mobile"></i> Lộ trình phát triển App "Sổ tay biến tần" bằng Flutter</a></li>
-            <li><a href="#"><i class="fas fa-database"></i> Xử lý Data Grid và tối ưu SQLite trong ứng dụng C# công nghiệp</a></li>
-        </ul>
     </section>
 
     <footer id="contact">
-        <p>Kết nối với Developer:</p>
-        <div class="social-links">
-            <a href="https://github.com/Tai-trieua" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            
-            <a href="https://www.linkedin.com/in/tri%E1%BB%87u-a-t%C3%A0i-thomas-23a715a3/" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            
-            <a href="mailto:trieuatai@gmail.com">
-                <i class="fas fa-envelope"></i> Email
-            </a>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <h3>TAITA (THOMAS)</h3>
+                <p>Developer ngành tự động hóa.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Tai-trieua" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/tri%E1%BB%87u-a-t%C3%A0i-thomas-23a715a3/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:trieuatai@gmail.com"><i class="fas fa-envelope"></i> trieuatai@gmail.com</a>
+            </div>
         </div>
-        <p class="copyright">&copy; 2026 Developed by Taita (Thomas).</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Designed by Taita.</p>
+        </div>
     </footer>
 
 </body>
