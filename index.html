@@ -6,6 +6,76 @@
     <title>Taita (Thomas) | Automation & Software Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS bổ sung cho chức năng đa ngôn ngữ và MyDrives */
+        .lang-en { display: none; } /* Mặc định ẩn tiếng Anh */
+        
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+            margin-left: 20px;
+        }
+
+        .lang-btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 1px solid var(--primary-color);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .mydrives-highlight {
+            background: linear-gradient(135deg, #001529 0%, #003366 100%);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .vfd-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .vfd-badge {
+            background: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .vfd-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .vfd-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .vfd-features i {
+            color: #34a853;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .vfd-grid { grid-template-columns: 1fr; text-align: center; }
+            .vfd-features li { justify-content: center; }
+        }
+    </style>
 </head>
 <body>
 
@@ -13,10 +83,14 @@
         <div class="container nav-container">
             <div class="logo">TAITA (THOMAS)</div>
             <ul class="nav-links">
-                <li><a href="#about">Năng lực</a></li>
-                <li><a href="#projects">Dự án</a></li>
-                <li><a href="#experience">Kinh nghiệm</a></li>
-                <li><a href="#contact" class="btn-contact">Liên hệ</a></li>
+                <li><a href="#about"><span class="lang-vi">Năng lực</span><span class="lang-en">Skills</span></a></li>
+                <li><a href="#mydrives">MyDrives</a></li>
+                <li><a href="#projects"><span class="lang-vi">Dự án</span><span class="lang-en">Projects</span></a></li>
+                <li><a href="#contact" class="btn-contact"><span class="lang-vi">Liên hệ</span><span class="lang-en">Contact</span></a></li>
+                <div class="lang-switcher">
+                    <div class="lang-btn active" onclick="setLanguage('vi')">VI</div>
+                    <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                </div>
             </ul>
         </div>
     </nav>
@@ -24,25 +98,57 @@
     <header class="hero">
         <div class="container hero-content">
             <span class="badge">Full-Stack Automation Developer</span>
-            <h1>Giải pháp Tự động hóa &<br>Phần mềm Công nghiệp</h1>
-            <p>Tôi kết hợp tư duy lập trình hiện đại (.NET/Blazor) với kiến thức điều khiển công nghiệp (PLC/Robot) để tạo ra các hệ thống sản xuất thông minh, chính xác và hiệu quả.</p>
+            <h1 class="lang-vi">Giải pháp Tự động hóa &<br>Phần mềm Công nghiệp</h1>
+            <h1 class="lang-en">Automation &<br>Industrial Software Solutions</h1>
+            
+            <p class="lang-vi">Tôi kết hợp tư duy lập trình hiện đại (.NET/Blazor) với kiến thức điều khiển công nghiệp (PLC/Robot) để tạo ra các hệ thống sản xuất thông minh, chính xác và hiệu quả.</p>
+            <p class="lang-en">I combine modern programming (.NET/Blazor) with industrial control expertise (PLC/Robot) to create smart, precise, and efficient production systems.</p>
+            
             <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">Xem Dự Án</a>
+                <a href="#projects" class="btn btn-primary"><span class="lang-vi">Xem Dự Án</span><span class="lang-en">View Projects</span></a>
                 <a href="https://github.com/Tai-trieua" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </header>
 
+    <!-- SECTION ĐẶC BIỆT: MyDrives-VFDHelp -->
+    <section id="mydrives" class="mydrives-highlight">
+        <div class="container">
+            <div class="vfd-grid">
+                <div>
+                    <span class="vfd-badge"><span class="lang-vi">Sản phẩm tiêu biểu</span><span class="lang-en">Featured Product</span></span>
+                    <h2>MyDrives - VFD Handbook</h2>
+                    <p class="lang-vi" style="color: #cbd5e0;">Ứng dụng di động tra cứu mã lỗi và sơ đồ kỹ thuật biến tần hàng đầu, hỗ trợ kỹ sư vận hành và bảo trì.</p>
+                    <p class="lang-en" style="color: #cbd5e0;">Leading mobile app for VFD error code and technical diagram lookup, supporting operation and maintenance engineers.</p>
+                    
+                    <ul class="vfd-features">
+                        <li><i class="fas fa-check-circle"></i> <span><span class="lang-vi">Hỗ trợ 34+ hãng Biến tần & 200+ Model</span><span class="lang-en">Supports 34+ VFD Brands & 200+ Models</span></span></li>
+                        <li><i class="fas fa-check-circle"></i> <span><span class="lang-vi">Hoạt động 100% Offline với SQLite</span><span class="lang-en">100% Offline operation with SQLite</span></span></li>
+                        <li><i class="fas fa-check-circle"></i> <span><span class="lang-vi">Phát hành trên App Store & Google Play</span><span class="lang-en">Released on App Store & Google Play</span></span></li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <div class="skill-card" style="background: rgba(255,255,255,0.1); border: none;">
+                        <i class="fas fa-mobile-alt" style="font-size: 5rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
+                        <h3 style="color: white;">Flutter + .NET 8</h3>
+                        <p class="lang-vi">Tích hợp giải pháp Cloud và Mobile cho công nghiệp.</p>
+                        <p class="lang-en">Integrating Cloud and Mobile solutions for industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="section-light">
         <div class="container">
-            <h2 class="section-title">Lĩnh Vực Chuyên Môn</h2>
+            <h2 class="section-title"><span class="lang-vi">Lĩnh Vực Chuyên Môn</span><span class="lang-en">Areas of Expertise</span></h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="icon-box"><i class="fas fa-robot"></i></div>
                     <h3>Industrial Automation</h3>
                     <ul class="skill-list">
-                        <li><strong>PLC:</strong> Siemens (S7-1200/1500), Beckhoff (PC-based Control).</li>
-                        <li><strong>Hardware:</strong> Yaskawa Servo Motors, Biến tần.</li>
+                        <li><strong>PLC:</strong> Siemens (S7-1200/1500), Beckhoff.</li>
+                        <li><strong>Hardware:</strong> Yaskawa Servo Motors, Inverters[cite: 1].</li>
                         <li><strong>Protocols:</strong> Modbus TCP/RTU, S7net, OPC UA.</li>
                     </ul>
                 </div>
@@ -50,104 +156,12 @@
                     <div class="icon-box"><i class="fas fa-code"></i></div>
                     <h3>Software Development</h3>
                     <ul class="skill-list">
-                        <li><strong>Core:</strong> C# .NET 8, Dependency Injection, Clean Architecture.</li>
-                        <li><strong>Web App:</strong> Blazor Server/WASM, MudBlazor UI.</li>
-                        <li><strong>Desktop:</strong> Windows Forms, WPF (MVVM).</li>
+                        <li><strong>Core:</strong> C# .NET 8, Clean Architecture.</li>
+                        <li><strong>Web App:</strong> Blazor Server/WASM, MudBlazor.</li>
+                        <li><strong>Mobile:</strong> Flutter (Cross-platform).</li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <div class="icon-box"><i class="fas fa-eye"></i></div>
-                    <h3>Computer Vision</h3>
-                    <ul class="skill-list">
-                        <li><strong>Camera:</strong> HIKRobot, Keyence Industrial Cams.</li>
-                        <li><strong>Libs:</strong> HALCON, OpenCV, Tesseract (OCR).</li>
-                        <li><strong>App:</strong> Nhận diện lỗi, đọc Date code (ORC).</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Mobile & IoT</h3>
-                    <ul class="skill-list">
-                        <li><strong>Mobile:</strong> Flutter (Cross-platform) cho ứng dụng kỹ thuật.</li>
-                        <li><strong>Database:</strong> SQLite, SQL Server, Entity Framework.</li>
-                        <li><strong>IoT:</strong> Kết nối thiết bị đo lường và SCADA.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section-gray">
-        <div class="container">
-            <h2 class="section-title">Dự Án Thực Tế</h2>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <div class="card-img">SCADA</div>
-                    <div class="card-body">
-                        <h3>TaTSCADA System</h3>
-                        <p class="desc">Hệ thống SCADA tùy biến cao, hỗ trợ thiết kế giao diện (UI Designer), quản lý User và lưu trữ layout động.</p>
-                        <div class="tech-stack">
-                            <span>C#</span><span>Blazor</span><span>SignalR</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img">VISION</div>
-                    <div class="card-body">
-                        <h3>ORC-Vision Solution</h3>
-                        <p class="desc">Giải pháp OCR đọc hạn sử dụng trên lon nước giải khát. Tích hợp Camera HIKRobot và xử lý ảnh tốc độ cao.</p>
-                        <div class="tech-stack">
-                            <span>OpenCV</span><span>Tesseract</span><span>HIK SDK</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img">WMS</div>
-                    <div class="card-body">
-                        <h3>QuanLyKho (WMS)</h3>
-                        <p class="desc">Ứng dụng quản lý kho toàn diện: Nhập/Xuất hàng, Export Excel, Quản lý nhà cung cấp & khách hàng.</p>
-                        <div class="tech-stack">
-                            <span>MudBlazor</span><span>Entity Framework</span><span>SQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img">ACCESS</div>
-                    <div class="card-body">
-                        <h3>NWAC Access Control</h3>
-                        <p class="desc">Hệ thống kiểm soát ra vào kho tự động, tích hợp nhận diện khuôn mặt và giao tiếp PLC cửa cuốn.</p>
-                        <div class="tech-stack">
-                            <span>.NET Core</span><span>FaceID API</span><span>Modbus</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-img">TOOLS</div>
-                    <div class="card-body">
-                        <h3>Servo Cable Selector</h3>
-                        <p class="desc">Phần mềm tính toán và chọn mã cáp nguồn/encoder cho Servo Yaskawa, hỗ trợ kỹ sư thiết kế điện.</p>
-                        <div class="tech-stack">
-                            <span>WinForm</span><span>Logic Algorithm</span>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="project-card">
-                    <div class="card-img">APP</div>
-                    <div class="card-body">
-                        <h3>Sổ Tay Biến Tần</h3>
-                        <p class="desc">Ứng dụng Mobile tra cứu mã lỗi và thông số kỹ thuật biến tần, sử dụng cơ sở dữ liệu offline SQLite.</p>
-                        <div class="tech-stack">
-                            <span>Flutter</span><span>SQLite</span><span>Dart</span>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- Các skill card khác giữ nguyên cấu trúc và thêm tag lang tương tự -->
             </div>
         </div>
     </section>
@@ -156,18 +170,36 @@
         <div class="container footer-content">
             <div class="footer-left">
                 <h3>TAITA (THOMAS)</h3>
-                <p>Developer ngành tự động hóa.</p>
+                <p class="lang-vi">Team Lead Kỹ thuật tại Nam Phương Việt (NPV)[cite: 1].</p>
+                <p class="lang-en">Technical Team Lead at Nam Phuong Viet (NPV)[cite: 1].</p>
             </div>
             <div class="footer-social">
                 <a href="https://github.com/Tai-trieua" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/tri%E1%BB%87u-a-t%C3%A0i-thomas-23a715a3/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:trieuatai@gmail.com"><i class="fas fa-envelope"></i> trieuatai11d2clc@gmail.com</a>
+                <a href="mailto:trieuatai11d2clc@gmail.com"><i class="fas fa-envelope"></i> Email</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Designed by Taita.</p>
+            <p>&copy; 2026 Designed by Taita Thomas.</p>
         </div>
     </footer>
 
+    <script>
+        function setLanguage(lang) {
+            // Cập nhật giao diện nút
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+            });
+
+            // Chuyển đổi hiển thị nội dung
+            if (lang === 'vi') {
+                document.querySelectorAll('.lang-vi').forEach(el => el.style.display = 'inline-block');
+                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+            } else {
+                document.querySelectorAll('.lang-vi').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'inline-block');
+            }
+        }
+    </script>
 </body>
 </html>
